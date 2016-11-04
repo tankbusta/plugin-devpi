@@ -15,5 +15,6 @@ RUN pip install -r requirements.txt
 RUN pip install --use-wheel --no-index --find-links=wheeldir \
     -r requirements.txt
 ADD run_devpi.py /usr/bin/
+ADD plugin_input.py /usr/bin/
 
 ENTRYPOINT ["python3", "/usr/bin/run_devpi.py"]
